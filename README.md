@@ -49,9 +49,6 @@ Este algoritmo que simula jogar uma bolinha em cada tubo pode funcionar da segui
 ```
 PROGRAM PlayGame()
 
-  numberOfChildren = list[0]
-  numberOfElements = list[1]
-
   linha = 0
 
   FOR coluna = 0; coluna < qtdColunas
@@ -60,7 +57,7 @@ PROGRAM PlayGame()
 
       SE matriz[linha][coluna] == null
 
-        linha += 1
+        linha ++
 
       SE NÃO
 
@@ -71,6 +68,7 @@ PROGRAM PlayGame()
 
     bolasTotal[coluna] += 1
     linha = 0
+
   FIM
 FIM
 ```
@@ -83,17 +81,17 @@ Depois de implementar o algoritmo acima na linguagem Java, os casos foram rodado
 
 Caso|Tamanho do Caso (colunas * linhas)|Tubo que sai mais bolinhas|Quantidade de bolinhas do tubo|Tempo de execução (milissegundos)
 |---|---|---|---|---|
-caso-1|800|10|5|1.2
-caso-2|5000|36|18|3.6
-caso-3|50000|72|85|23.6
-caso-4|200000|199|82|92.4
-caso-5|1000000|180|139|212.8
-caso-6|5000000|885|250|465.1
-caso-7|20000000|680|546|2248.3
-caso-8|100000000|2195|1565|14635.1
+caso1|800|10|5|1.2
+caso2|5000|36|18|3.6
+caso3|50000|72|85|23.6
+caso4|200000|199|82|92.4
+caso5|1000000|180|139|212.8
+caso6|5000000|885|250|465.1
+caso7|20000000|680|546|2248.3
+caso8|100000000|2195|1565|14635.1
 
 ## Conclusões
 
 As primeiras indagações a respeito do desafio proposto, mesmo não oferecendo um resultado, contribuíram bastante para o entendimento do problema e abriu caminho para uma possível solução funcional. A partir disso, concluímos que geralmente levantar hipóteses para a solução de um problema e tentar achar equívocos nelas pode ser muito mais vantajoso do que simplesmente começar a implementando.
 
-A forma apresentada de armazenar os desvios nos tubos se mostrou bastante simples, embora eu gostaria testar e discutir outras estruturas de dados para representar estes desvios, como por exemplo um dicionário. Contudo, a solução adotada possui uma notação **O(n * m)**, onde *n* é referente a quantidade de tubos e *m* ao comprimento dos tubos, pois no pior dos casos todos os tubos possuem desvios em todos os níveis dos seus comprimentos, logo o tempo de execução cresce proporcional a essas duas variáveis.
+A forma apresentada de armazenar os desvios nos tubos se mostrou bastante simples, embora eu gostaria testar e discutir outras estruturas de dados para representar estes desvios, como por exemplo um dicionário. Contudo, a solução adotada possui uma notação **O(n * m)**, onde **n** é referente a quantidade de tubos e **m** ao comprimento dos tubos, pois no pior dos casos todos os tubos possuem desvios em todos os níveis dos seus comprimentos, logo o tempo de execução cresce proporcional a essas duas variáveis.
