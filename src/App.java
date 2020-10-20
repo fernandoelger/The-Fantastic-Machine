@@ -1,8 +1,9 @@
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class App {
 
-    public static void main(String args[]){
+        public static void main(String args[]) throws FileNotFoundException {
 
         Scanner s = new Scanner(System.in);
         TubeAndBallMachine tbMachine = new TubeAndBallMachine();

@@ -22,7 +22,7 @@ public class TubeAndBallMachine{
     private int pathsNumber;
 
 
-    public void caseTest(String casom){
+    public void caseTest(String casom) throws FileNotFoundException {
 
         long start = System.currentTimeMillis();
         readCaseAndCreatePaths(casom);
@@ -47,7 +47,7 @@ public class TubeAndBallMachine{
         System.out.println("Execution time: " + elapsed + " milliseconds\n\n");
     }
 
-    public void readCaseAndCreatePaths(String casom){
+    public void readCaseAndCreatePaths(String casom) throws FileNotFoundException {
 
         try (Scanner s = new Scanner(new File("casos-cohen/" + casom))){
 
@@ -68,8 +68,8 @@ public class TubeAndBallMachine{
             }
             s.close();
 
-        } catch (FileNotFoundException e){
-            e.getMessage();
+        }catch (FileNotFoundException e){
+            throw new FileNotFoundException("input.txt not found in the program directory.");
         }
     }
 
