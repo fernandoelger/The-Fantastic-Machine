@@ -86,7 +86,7 @@ Caso|Tamanho do Caso (colunas * linhas)|Tubo que sai mais bolinhas|Quantidade de
 caso-1|800|10|5|1.2
 caso-2|5000|36|18|3.6
 caso-3|50000|72|85|23.6
-caso-4|50000|199|82|92.4
+caso-4|200000|199|82|92.4
 caso-5|1000000|180|139|212.8
 caso-6|5000000|885|250|465.1
 caso-7|20000000|680|546|2248.3
